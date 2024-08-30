@@ -40,17 +40,17 @@
 			      		<div class="form-group mt-3">
 			      			<%--<input type="text" class="form-control" required>--%>
                             <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
-			      			<label class="form-control-placeholder" for="username">Username</label>
+			      			<label class="form-control-placeholder" for="username">Usuario</label>
 			      		</div>
 		            <div class="form-group">
 		              <%--<input id="password-field" type="password" class="form-control" required>--%>
                       <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
-		              <label class="form-control-placeholder" for="password">Password</label>
+		              <label class="form-control-placeholder" for="password">Contraseña</label>
 		              <%--<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>--%>
 		            </div>
 		            <div class="form-group">
 		            	<%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>
-                        <asp:Button ID="btnLogin" runat="server" Text="Login" onclick="btnLogin_Click" class="form-control btn btn-primary rounded submit px-3"></asp:Button>
+                        <asp:Button ID="btnLogin" runat="server" Text="Ingresar" onclick="btnLogin_Click" class="form-control btn btn-primary rounded submit px-3"></asp:Button>
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">

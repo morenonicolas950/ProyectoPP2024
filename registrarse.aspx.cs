@@ -11,6 +11,9 @@ namespace ProyectoPP2024
 {
     public partial class registrarse : System.Web.UI.Page
     {
+
+        private static string Cadena = ConfigurationManager.ConnectionStrings["Cadena"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,10 +25,10 @@ namespace ProyectoPP2024
             string nuevoEmail = txtEmail.Text;
             string nuevaContrasena = txtPass.Text;
 
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ProfesorDB"].ConnectionString))
+            using (SqlConnection con = new SqlConnection(Cadena))
             {
-                string query = "INSERT INTO USUARIOS (NombreUsuario, Email, Contrasena) VALUES (@NombreUsuario, @Email, @Contrasena)";
-                SqlCommand cmd = new SqlCommand(query, con);
+                string script = "INSERT INTO USUARIOS (NombreUsuario, Email, Contrasena) VALUES (@NombreUsuario, @Email, @Contrasena)";
+                SqlCommand cmd = new SqlCommand(script, con);
                 cmd.Parameters.AddWithValue("@NombreUsuario", nuevoUsuario);
                 cmd.Parameters.AddWithValue("@Email", nuevoEmail);
                 cmd.Parameters.AddWithValue("@contrasena", nuevaContrasena);
@@ -53,6 +56,11 @@ namespace ProyectoPP2024
                 txtEmail.Text = "";
                 txtPass.Text = "";
                 txtRepPass.Text = "";
+            }
+
+            protected void btnVolver_Click(object sender, EventArgs e)
+            {
+                Response.Redirect("Login.aspx");
             }
         }
     }

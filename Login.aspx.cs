@@ -10,7 +10,10 @@ using System.Configuration;
 namespace ProyectoPP2024
 {
     public partial class Login : System.Web.UI.Page
+
     {
+        private static string Cadena = ConfigurationManager.ConnectionStrings["Cadena"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,10 +25,10 @@ namespace ProyectoPP2024
                 string nombreUsuario = txtUsuario.Text;
                 string contrasena = txtPassword.Text;
 
-                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ProfesorDB"].ConnectionString))
+                using (SqlConnection con = new SqlConnection(Cadena))
                 {
-                    string query = "SELECT COUNT(1) FROM Usuarios WHERE NombreUsuario=@NombreUsuario AND Contrasena=@Contrasena";
-                    SqlCommand cmd = new SqlCommand(query, con);
+                    string script = "SELECT COUNT(1) FROM Usuarios WHERE NombreUsuario=@NombreUsuario AND Contrasena=@Contrasena";
+                    SqlCommand cmd = new SqlCommand(script, con);
                     cmd.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
                     cmd.Parameters.AddWithValue("@Contrasena", contrasena);
 
