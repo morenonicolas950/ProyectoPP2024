@@ -68,10 +68,10 @@
 		</div>
 	</section>
 
-	<script src="Estilos/login/js/jquery.min.js"></script>
-  <script src="Estilos/login/js/popper.js"></script>
-  <script src="Estilos/login/js/bootstrap.min.js"></script>
-  <script src="Estilos/login/js/main.js"></script>
+	<script  src="Estilos/login/js/jquery.min.js"></script>
+  <script  src="Estilos/login/js/popper.js"></script>
+  <script  src="Estilos/login/js/bootstrap.min.js"></script>
+  <script" src="Estilos/login/js/main.js"></script>
 
 	</body>
 </html>
