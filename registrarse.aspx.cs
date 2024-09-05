@@ -41,6 +41,8 @@ namespace ProyectoPP2024
                     lblTexto.Text = "Usuario registrado exitosamente";
                     con.Close();
                     limpiar();
+                    Response.Redirect("Login.aspx");
+
                 }
 
                 catch (SqlException ex)
@@ -56,11 +58,6 @@ namespace ProyectoPP2024
                 txtEmail.Text = "";
                 txtPass.Text = "";
                 txtRepPass.Text = "";
-            }
-
-            protected void btnVolver_Click(object sender, EventArgs e)
-            {
-                Response.Redirect("Login.aspx");
             }
         }
     }

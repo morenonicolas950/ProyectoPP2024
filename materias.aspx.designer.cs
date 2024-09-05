@@ -10,6 +10,6 @@
 namespace ProyectoPP2024 {
     
     
-    public partial class CRUD {
+    public partial class materias {
     }
 }

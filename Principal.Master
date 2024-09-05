@@ -28,10 +28,10 @@
             <a href="inicio.aspx"><span class="fa fa-home mr-3"></span> Inicio </a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-user mr-3"></span> Ofertas </a>
+             <asp:HyperLink class="fa fa-user mr-3" ID="hl_profesores" runat="server" NavigateUrl="~/profesores.aspx" >Profesores</asp:HyperLink>
           </li>
           <li>
-            <a href="#"><span class="fa fa-sticky-note mr-3"></span> Registros </a>
+            <asp:HyperLink class="fa fa-sticky-note mr-3" ID="hl_materias" NavigateUrl="~/materias.aspx" runat="server">Materias</asp:HyperLink>
           </li>
           <li>
             <%--<a href="#"><span class="fa fa-sticky-note mr-3"></span> Subcription</a>

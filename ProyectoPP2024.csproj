@@ -51,7 +51,6 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CRUD.aspx" />
     <Content Include="Estilos\Login\css\bootstrap.min.css" />
     <Content Include="Estilos\Login\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Estilos\Login\css\bootstrap\mixins\_screen-reader.css" />
@@ -78,6 +77,8 @@
     <Content Include="Estilos\Master\js\popper.js" />
     <Content Include="inicio.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="materias.aspx" />
+    <Content Include="profesores.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
@@ -95,13 +96,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUD.aspx.cs">
-      <DependentUpon>CRUD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CRUD.aspx.designer.cs">
-      <DependentUpon>CRUD.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -119,12 +113,26 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="materias.aspx.cs">
+      <DependentUpon>materias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="materias.aspx.designer.cs">
+      <DependentUpon>materias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="profesores.aspx.cs">
+      <DependentUpon>profesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profesores.aspx.designer.cs">
+      <DependentUpon>profesores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrarse.aspx.cs">

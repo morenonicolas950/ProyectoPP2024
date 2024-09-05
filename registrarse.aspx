@@ -36,7 +36,7 @@
                 </td>
             </tr>
             <tr>
-                <td style= Height="30px" Width="241px">
+                <td style= height="30px" width="241px">
                     <asp:Label Text="Contraseña" ID="lblContraseña" runat="server" />
                 </td>
                 <td>
@@ -70,9 +70,6 @@
         <asp:Button Text="Registrar" CssClass="btn btn-success" ID="btnRegistrar" runat="server" OnClick="btnRegistrar_Click" />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
     </div>
-    <p>
-        <asp:Button ID="btnVolver" runat="server" Text="Volver" onclick="btnVolver_Click" />
-    </p>
     </form>
 </body>
 </html>
