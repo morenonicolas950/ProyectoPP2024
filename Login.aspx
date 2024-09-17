@@ -45,11 +45,11 @@
 		            <div class="form-group">
 		              <%--<input id="password-field" type="password" class="form-control" required>--%>
                       <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
-		              <label class="form-control-placeholder" for="password">Contraseña</label>
-		              <%--<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>--%>
+		              <label class="form-control-placeholder" for="txtpassword">Contraseña</label>
+		              <span toggle="#txtpassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
 		            <div class="form-group">
-		            	<%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>
+		            	 <%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>
                         <asp:Button ID="btnLogin" runat="server" Text="Ingresar" onclick="btnLogin_Click" class="form-control btn btn-primary rounded submit px-3"></asp:Button>
 		            </div>
 		            <div class="form-group d-md-flex">
@@ -71,7 +71,7 @@
 	<script  src="Estilos/login/js/jquery.min.js"></script>
   <script  src="Estilos/login/js/popper.js"></script>
   <script  src="Estilos/login/js/bootstrap.min.js"></script>
-  <script" src="Estilos/login/js/main.js"></script>
+  <script src="Estilos/login/js/main.js"></script>
 
 	</body>
 </html>
