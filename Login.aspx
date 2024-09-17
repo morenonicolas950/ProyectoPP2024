@@ -40,12 +40,17 @@
 			      		<div class="form-group mt-3">
 			      			<%--<input type="text" class="form-control" required>--%>
                             <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                           
 			      			<label class="form-control-placeholder" for="username">Usuario</label>
+                             <asp:RequiredFieldValidator ID="rfvUsuario" runat="server" ControlToValidate="txtUsuario" ErrorMessage="El campo USUARIO es obligatorio" ForeColor="Red">
+                            </asp:RequiredFieldValidator>
 			      		</div>
 		            <div class="form-group">
 		              <%--<input id="password-field" type="password" class="form-control" required>--%>
                       <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
 		              <label class="form-control-placeholder" for="txtpassword">Contraseña</label>
+                      <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtpassword" ErrorMessage="El campo CONTRASEÑA es obligatorio" ForeColor="Red">
+                            </asp:RequiredFieldValidator>
 		              <span toggle="#txtpassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
 		            <div class="form-group">
