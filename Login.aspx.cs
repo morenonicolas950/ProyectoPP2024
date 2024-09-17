@@ -40,7 +40,7 @@ namespace ProyectoPP2024
                     {
                         // Autenticación exitosa
                         Session["NombreUsuario"] = nombreUsuario;
-                        Response.Redirect("inicio.aspx");
+                        Page.Response.Redirect("inicio.aspx");
                     }
                     else
                     {
