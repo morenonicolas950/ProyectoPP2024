@@ -13,5 +13,12 @@ namespace ProyectoPP2024
         {
 
         }
+
+        protected void Btn_NuevoProfesor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("nuevoprofesor.aspx");
+        }
+
     }
+
 }

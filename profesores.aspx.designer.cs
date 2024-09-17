@@ -13,6 +13,15 @@ namespace ProyectoPP2024 {
     public partial class profesores {
         
         /// <summary>
+        /// Control Btn_NuevoProfesor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_NuevoProfesor;
+        
+        /// <summary>
         /// Control GridView1.
         /// </summary>
         /// <remarks>
