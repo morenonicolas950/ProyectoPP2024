@@ -17,3 +17,8 @@ C:\Users\Nicolas Moreno\OneDrive\Documentos\GitHub\ProyectoPP2024\ProyectoPP2024
 C:\Users\Nicolas Moreno\OneDrive\Documentos\GitHub\ProyectoPP2024\ProyectoPP2024\obj\Debug\ProyectoPP2024.csprojResolveAssemblyReference.cache
 C:\Users\Nicolas Moreno\OneDrive\Documentos\GitHub\ProyectoPP2024\ProyectoPP2024\obj\Debug\ProyectoPP2024.dll
 C:\Users\Nicolas Moreno\OneDrive\Documentos\GitHub\ProyectoPP2024\ProyectoPP2024\obj\Debug\ProyectoPP2024.pdb
+C:\Users\USER\Documents\GitHub\ProyectoPP2024\bin\ProyectoPP2024.dll
+C:\Users\USER\Documents\GitHub\ProyectoPP2024\bin\ProyectoPP2024.pdb
+C:\Users\USER\Documents\GitHub\ProyectoPP2024\obj\Debug\ProyectoPP2024.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\ProyectoPP2024\obj\Debug\ProyectoPP2024.dll
+C:\Users\USER\Documents\GitHub\ProyectoPP2024\obj\Debug\ProyectoPP2024.pdb
