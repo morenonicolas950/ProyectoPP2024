@@ -81,6 +81,7 @@
     <Content Include="nuevoprofesor.aspx" />
     <Content Include="profesores.aspx" />
     <Content Include="registrarse.aspx" />
+    <Content Include="Script_SQL\SCRIPT PP2024.sql" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />

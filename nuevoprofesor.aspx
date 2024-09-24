@@ -6,14 +6,7 @@
 <head runat="server">
     <title>Nuevo Profesor</title>
     <style type="text/css">
-        .style1
-        {
-            width: 111px;
-        }
-        .style2
-        {
-            width: 177px;
-        }
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         #Select1
         {
             width: 243px;
@@ -25,83 +18,87 @@
 <body>
     <h1> NUEVO PROFESOR</h1>
     <form id="form1" runat="server">
-    <div>
-        <table style="height: 398px; width: 542px">
-            <tr>
-                <td class="style2"
->
-                    <asp:Label Text="Nombre" ID="lblNombreProfesor" runat="server" />
-                </td>
-                <td>
-                    <asp:TextBox CssClass="form-control" ID="txtNombreProfesor" runat="server" 
-                        placeholder="ej. Juan " Height="30px" Width="241px" />
-                </td>
-                <td class="style1">
-                    <asp:RequiredFieldValidator ID="rfvNombreProfesor" ControlToValidate="txtNombreProfesor" runat="server" ErrorMessage="Debe ingresar un nombre" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td class="style2"
->
-                    <asp:Label Text="Apellido" ID="lblApellido" runat="server" />
-                </td>
-                <td>
-                    <asp:TextBox CssClass="form-control" ID="txtApellidoProfesor" runat="server" placeholder="ej.Gomez" Height="30px" Width="241px" />
-                </td>
-                <td class="style1">
-                    <asp:RequiredFieldValidator ID="rfvApellidoProfesor" ControlToValidate="txtApellidoProfesor" runat="server" ErrorMessage="Debe ingresar un apellido" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td class="style2">
-                    <asp:Label Text="Email" ID="lblEmailProfesor" runat="server" />
-                </td>
-                <td style= height="30px" width="241px">
-                    <asp:TextBox CssClass="form-control" ID="txtEmailProfesor" runat="server" Height="30px" Width="241px" />
-                </td>
-                 <td class="style1">
-                    <asp:RequiredFieldValidator ID="rfvEmail" ControlToValidate="txtEmailProfesor" type="email" runat="server" ErrorMessage="Debe ingresar un email" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td class="style2">
-                    <asp:Label Text="Telefono" ID="LblTelefono" runat="server" />
-                </td>
-                <td>
-                    <asp:TextBox CssClass="form-control" ID="txtTelefono" runat="server" Height="30px" Width="241px"/>
-                </td>
-                 <td class="style1">
-                    <asp:RequiredFieldValidator ErrorMessage="Debe ingresar un telefono de contacto" ID="RfvTelefono" ControlToValidate="txtTelefono" type="number" runat="server" Text="*" ForeColor="Red"/>
-                </td>
-            </tr>
-             <tr>
-                <td style="width: 126px"
->
-                    <asp:Label Text="Localidad" ID="lblLocalidad" runat="server" />
-                </td>
-                <td>
-                    &nbsp;<asp:DropDownList ID="ComboboxLocalidad" runat="server" DataSourceID="SqlDataSource1" 
-                        DataTextField="DESCRIPCION" DataValueField="ID_LOCALIDAD" Width="250px">
-                    </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
-                        SelectCommand="SELECT * FROM [LOCALIDAD]"></asp:SqlDataSource>
-                <td class="style1">
-                    <asp:RequiredFieldValidator ID="RfvComboboxLocalidad" ControlToValidate="ComboboxLocalidad" runat="server" ErrorMessage="Debe seleccionar una localidad" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <asp:Label ID="lblTexto" Font-Bold="true" ForeColor="red" Text="" runat="server" />
-                </td>
-            </tr>
-        </table>
-        <br />
-        <asp:Button Text="Cargar" CssClass="btn btn-success" ID="btnCargar" 
-            runat="server" OnClick="btnCargar_Click" Width="81px" />
-        <asp:ValidationSummary ID="VSCarga" runat="server" ForeColor="Red" />
-    </div>
+   <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+                    <h4 class="text-center mb-4">Registrar Profesor</h4>
 
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        <label for="txtNombre">Nombre</label>
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="El nombre es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Apellido -->
+                    <div class="form-group">
+                        <label for="txtApellido">Apellido</label>
+                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido" ErrorMessage="El apellido es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="txtEmail">Correo Electrónico</label>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="El correo es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="form-group">
+                        <label for="txtTelefono">Teléfono</label>
+                        <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono" ErrorMessage="El teléfono es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Localidad -->
+                    <div class="form-group">
+                        <label for="ddlLocalidad">Localidad</label>
+                        <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-control" 
+                            DataSourceID="SqlDataSource2" DataTextField="DESCRIPCION" 
+                            DataValueField="ID_LOCALIDAD">  </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
+                            SelectCommand="SELECT * FROM [LOCALIDAD]"></asp:SqlDataSource>
+                        <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="ddlLocalidad" InitialValue="" ErrorMessage="Debe seleccionar una localidad" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Materia -->
+                    <div class="form-group">
+                        <label for="ddlMateria">Materia</label>
+                        <asp:DropDownList ID="ddlMateria" runat="server" CssClass="form-control" 
+                            DataSourceID="SqlDataSource1" DataTextField="DESCRIPCION" 
+                            DataValueField="ID_MATERIA"></asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
+                            SelectCommand="SELECT * FROM [MATERIA]"></asp:SqlDataSource>
+                        <asp:RequiredFieldValidator ID="rfvMateria" runat="server" ControlToValidate="ddlMateria" InitialValue="" ErrorMessage="Debe seleccionar una materia" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Precio -->
+                    <div class="form-group">
+                        <label for="txtPrecio">Precio por Hora</label>
+                        <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" Placeholder="Precio" type="number"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="El precio es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+
+                    <!-- Botón para registrar el profesor -->
+                    <div class="form-group text-center">
+                        <asp:Button ID="btnRegistrarProfesor" runat="server" CssClass="btn btn-primary" Text="Registrar Profesor" OnClick="btnRegistrarProfesor_Click" />
+                    </div>
+
+                    <!-- Mensaje de resultado -->
+                    <div class="form-group text-center">
+                        <asp:Label ID="lblMensaje" runat="server" CssClass="text-danger"></asp:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <asp:Button ID="Btn_Volver" runat="server" Text="Volver" onclick="Btn_Volver_Click" CausesValidation="false" />
     </form>
+   
+   
 </body>
 </html>
