@@ -8,7 +8,7 @@ CREATE TABLE USUARIOS(
 Id_Usuario INT PRIMARY KEY IDENTITY (1,1),
 NombreUsuario NVARCHAR(50),
 Email NVARCHAR(50),
-Contraseña INT 
+Contrasena INT 
 );
 
 INSERT USUARIOS VALUES ('nicolas','nicolas_moreno@gmail.com',123);
