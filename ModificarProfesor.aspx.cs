@@ -7,11 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace ProyectoPP2024
 {
-    public partial class materias : System.Web.UI.Page
+    public partial class ModificarProfesor : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string id = Request.QueryString["id"];
 
         }
     }

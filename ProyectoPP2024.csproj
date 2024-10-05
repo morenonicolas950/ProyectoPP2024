@@ -51,6 +51,10 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarProfesor.aspx" />
+    <Content Include="AsignarMateriaProfesor.aspx" />
+    <Content Include="Estilos\imagenes\editar.png" />
+    <Content Include="Estilos\imagenes\eliminar.png" />
     <Content Include="Estilos\Login\css\bootstrap.min.css" />
     <Content Include="Estilos\Login\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Estilos\Login\css\bootstrap\mixins\_screen-reader.css" />
@@ -78,7 +82,7 @@
     <Content Include="inicio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="materias.aspx" />
-    <Content Include="nuevoprofesor.aspx" />
+    <Content Include="ModificarProfesor.aspx" />
     <Content Include="profesores.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="Script_SQL\SCRIPT PP2024.sql" />
@@ -99,6 +103,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarProfesor.aspx.cs">
+      <DependentUpon>AgregarProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarProfesor.aspx.designer.cs">
+      <DependentUpon>AgregarProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarMateriaProfesor.aspx.cs">
+      <DependentUpon>AsignarMateriaProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AsignarMateriaProfesor.aspx.designer.cs">
+      <DependentUpon>AsignarMateriaProfesor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -123,12 +141,12 @@
     <Compile Include="materias.aspx.designer.cs">
       <DependentUpon>materias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="nuevoprofesor.aspx.cs">
-      <DependentUpon>nuevoprofesor.aspx</DependentUpon>
+    <Compile Include="ModificarProfesor.aspx.cs">
+      <DependentUpon>ModificarProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="nuevoprofesor.aspx.designer.cs">
-      <DependentUpon>nuevoprofesor.aspx</DependentUpon>
+    <Compile Include="ModificarProfesor.aspx.designer.cs">
+      <DependentUpon>ModificarProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>

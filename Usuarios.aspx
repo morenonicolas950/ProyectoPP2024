@@ -7,7 +7,8 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                 DataKeyNames="Id_Usuario" DataSourceID="SqlDataSource1" 
                 EmptyDataText="No hay registros de datos para mostrar." Width="767px" 
-                    CssClass="table table-borderless table-hover text-center">
+                    CssClass="table table-borderless table-hover text-center" 
+                >
                 <Columns>
                     <asp:BoundField DataField="Id_Usuario" HeaderText="Id_Usuario" ReadOnly="True" 
                         SortExpression="Id_Usuario" />

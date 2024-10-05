@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
-        <div class="h-50 bg-dark border-white mb-3 d-flex justify-content-end"  >
+        <div class="h-50 bg-dark border-white mb-3 d-flex justify-content-center"  >
             <asp:Button ID="Btn_NuevoProfesor" runat="server" Text="Nuevo" Width="120px" 
                 BackColor="LightGreen" CssClass="m-2 mr-3" onclick="Btn_NuevoProfesor_Click"/>
         </div>
@@ -18,9 +18,19 @@
                     <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" SortExpression="EMAIL" />
                     <asp:BoundField DataField="TELEFONO" HeaderText="TELEFONO" SortExpression="TELEFONO" />
                     <asp:BoundField DataField="LOCALIDAD" HeaderText="LOCALIDAD" SortExpression="DESCRIPCION" />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-warning" CommandName="Modificar" CommandArgument='<%# Eval("ID_PROFESOR") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField>
+            <ItemTemplate>
+                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="delete" CommandArgument='<%# Eval("ID_PROFESOR") %>' OnClientClick="return confirm('¿Estás seguro de que deseas eliminar este registro?');" />
+            </ItemTemplate>
+        </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                     ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
                     DeleteCommand="DELETE FROM [PROFESOR] WHERE [ID_PROFESOR] = @ID_PROFESOR" 
                     InsertCommand="INSERT INTO [PROFESOR] ([NOMBRE], [APELLIDO], [EMAIL], [TELEFONO], [ID_LOCALIDAD]) VALUES (@NOMBRE, @APELLIDO, @EMAIL, @TELEFONO, @ID_LOCALIDAD)" 
