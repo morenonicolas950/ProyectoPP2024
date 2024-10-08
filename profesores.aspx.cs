@@ -21,7 +21,16 @@ namespace ProyectoPP2024
 
         protected void Btn_NuevoProfesor_Click(object sender, EventArgs e)
         {
-            Response.Redirect("nuevoprofesor.aspx");
+            Page.Response.Redirect("AgregarProfesor.aspx");
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Editar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                string id = GridView1.DataKeys[index].ToString();
+            } 
         }
 
     }

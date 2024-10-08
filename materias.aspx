@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="materias.aspx.cs" Inherits="ProyectoPP2024.materias" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
+    <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         DataKeyNames="ID_MATERIA" DataSourceID="SqlDataSource1" 
         EmptyDataText="No hay registros de datos para mostrar." CssClass="table table-borderless table-hover text-center">

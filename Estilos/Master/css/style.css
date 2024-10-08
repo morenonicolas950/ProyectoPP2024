@@ -3780,8 +3780,12 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+    top: 0px;
+    left: 0px;
+    height: 25px;
+    width: 229px;
+}
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -7926,7 +7930,9 @@ button.bg-dark:focus {
   text-align: right !important; }
 
 .text-center {
-  text-align: center !important; }
+  text-align: center !important;
+    margin-right: 0px;
+}
 
 @media (min-width: 576px) {
   .text-sm-left {
