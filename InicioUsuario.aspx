@@ -45,13 +45,15 @@
                         <form id="Form2" action="#" class="signin-form">
                             <div class="filter-options">
                                 <label for="tipo">Buscar por materia</label>
-                                <asp:DropDownList ID="tipo" runat="server">
+                                <asp:DropDownList ID="tipo" runat="server" DataSourceID="SqlDataSource1" 
+                                    DataTextField="DESCRIPCION" DataValueField="ID_MATERIA">
                                     <asp:ListItem Value="todos">Todos</asp:ListItem>
-                                    <asp:ListItem Value="matematica">Análisis Matemático</asp:ListItem>
-                                    <asp:ListItem Value="programacion">Programación</asp:ListItem>
-                                    <asp:ListItem Value="algebra">Álgebra</asp:ListItem>
-                                    <asp:ListItem Value="bdatos">Base de Datos</asp:ListItem>
+
                                 </asp:DropDownList>
+    
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
+                                    SelectCommand="SELECT * FROM [MATERIA]"></asp:SqlDataSource>
     
                                 <label for="zona">Zonas</label>
                                 <asp:DropDownList ID="zona" runat="server">
@@ -64,7 +66,7 @@
                             </div>
 
                                 <div>
-                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" onclick="btnBuscar_Click" class="btn btn-outline-light btn-lg"></asp:Button>
+                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" onclick="btnBuscar_Click"  CssClass="btn btn-outline-light btn-lg"></asp:Button>
                                 </div>
 
                                <!-- <button type="submit">Buscar</button> -->

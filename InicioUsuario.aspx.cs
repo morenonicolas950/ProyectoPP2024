@@ -18,11 +18,11 @@ namespace ProyectoPP2024
         {
             // Obtener los valores seleccionados por el usuario
             string materia = tipo.SelectedValue;
-            string zona = zona.SelectedValue;
+            string zon = zona.SelectedValue;
 
 
              // Redirigir con los parámetros seleccionados
-            Response.Redirect($"Resultados.aspx?materia={materia}&zona={zona}");
+            Response.Redirect(String.Format("Resultados.aspx?materia={0}&zona={1}", materia, zon));
         }
     }
 }
