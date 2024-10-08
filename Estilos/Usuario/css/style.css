@@ -1,3 +1,38 @@
-.navbar-light .navbar-nav .nav-link {
-  color: #000;
+/* Estilo para mejorar el diseño del navbar */
+.navbar-nav a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Color de texto negro */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Ajuste de la imagen de fondo y centrado de texto */
+.bg-image {
+    /* Añadir un margen superior a la imagen de fondo */
+.bg-image {
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Ajusta la altura de la imagen */
+    margin-top: 250px; /* Añade espacio entre el navbar y la imagen */
+    padding-top: 30px; /* Añadir un pequeño padding si quieres espacio dentro de la imagen */
+}
+
+}
+
+.bg-image .mask {
+    background-color: rgba(0, 0, 0, 0.6); /* Opacidad de la máscara para hacer el texto más visible */
+}
+
+/* Estilo del texto */
+.text-white h1, .text-white h4 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para hacer el texto más legible */
+}
+
+/* Estilo del botón */
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
 }

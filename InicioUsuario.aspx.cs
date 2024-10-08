@@ -13,5 +13,16 @@ namespace ProyectoPP2024
         {
 
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores seleccionados por el usuario
+            string materia = tipo.SelectedValue;
+            string zona = zona.SelectedValue;
+
+
+             // Redirigir con los parámetros seleccionados
+            Response.Redirect($"Resultados.aspx?materia={materia}&zona={zona}");
+        }
     }
 }
