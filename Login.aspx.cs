@@ -12,7 +12,7 @@ namespace ProyectoPP2024
     public partial class Login : System.Web.UI.Page
 
     {
-        private static string Cadena = ConfigurationManager.ConnectionStrings["Cadena"].ConnectionString;
+        private static string Cadena = ConfigurationManager.ConnectionStrings["PRACTICAPROFESIONALConnectionString1"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {

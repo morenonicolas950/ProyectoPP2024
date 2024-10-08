@@ -16,21 +16,21 @@
 
                 <div class="form-group mb-3">
                     <label for="txtApellido">Apellido</label>
-                    <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" BorderColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control bg-light"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido"
                         ErrorMessage="El apellido es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="txtEmail">Email</label>
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" BorderColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control bg-light" ></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail"
                         ErrorMessage="El email es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="txtTelefono">Teléfono</label>
-                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" BorderColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control bg-light"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono"
                         ErrorMessage="El teléfono es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>

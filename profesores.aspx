@@ -9,7 +9,8 @@
         <div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_PROFESOR"
                 DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar."
-                CssClass="table table-borderless table-hover text-center">
+                CssClass="table table-borderless table-hover text-center" 
+                AllowSorting="True" onrowcommand="GridView1_RowCommand" >
                 <Columns>
                     <asp:BoundField DataField="ID_PROFESOR" HeaderText="ID_PROFESOR" ReadOnly="True"
                         SortExpression="ID_PROFESOR" />
@@ -20,7 +21,7 @@
                     <asp:BoundField DataField="LOCALIDAD" HeaderText="LOCALIDAD" SortExpression="DESCRIPCION" />
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-warning" CommandName="Modificar" CommandArgument='<%# Eval("ID_PROFESOR") %>' />
+                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-warning" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField>

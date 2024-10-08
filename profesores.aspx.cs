@@ -16,7 +16,21 @@ namespace ProyectoPP2024
 
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            {
+                if (!Page.IsPostBack)
+                {
+                    if (Session["NombreUsuario"] == null)
+                    {
+                        Response.Redirect("Login.aspx");
+                    }
+                    else
+                    {
+                        if (Session["NombreUsuario"].ToString() == String.Empty)
+                            Response.Redirect("Login.aspx");
+                    }
+                }
+            }
+
         }
 
         protected void Btn_NuevoProfesor_Click(object sender, EventArgs e)
@@ -28,10 +42,12 @@ namespace ProyectoPP2024
         {
             if (e.CommandName == "Editar")
             {
+                //e.CommandArgument.ToString();
                 int index = int.Parse(e.CommandArgument.ToString());
-                string id = GridView1.DataKeys[index].ToString();
-            } 
+                string id = GridView1.DataKeys[index].Value.ToString();
+                Response.Redirect("ModificarProfesor.aspx?ID=" + id);
+                //GridView1.data
+            }
         }
-
     }
 }

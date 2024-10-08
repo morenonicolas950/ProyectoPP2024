@@ -13,21 +13,21 @@
 
                 <div class="form-group mb-3">
                     <label for="txtApellido">Apellido</label>
-                    <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" BorderColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control bg-light"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido"
                         ErrorMessage="El apellido es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="txtEmail">Email</label>
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" BorderColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control bg-light" ></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail"
                         ErrorMessage="El email es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="txtTelefono">Teléfono</label>
-                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" BorderColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control bg-light" BorderColor="Black"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono"
                         ErrorMessage="El teléfono es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
@@ -36,7 +36,7 @@
                     <label for="ddlLocalidad">Localidad</label>
                     <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-select" 
                         DataSourceID="SqlDataSource1" DataTextField="DESCRIPCION" 
-                        DataValueField="ID_LOCALIDAD"></asp:DropDownList>
+                        DataValueField="ID_LOCALIDAD" Width="89px"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                         ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
                         SelectCommand="SELECT * FROM [LOCALIDAD]"></asp:SqlDataSource>
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <asp:Button ID="btnModificarProfesor" runat="server" Text="Modificar" CssClass="btn btn-primary w-100" OnClick="btnModificarProfesor_Click" />
+                    <asp:Button ID="btnModificarProfesor" runat="server" Text="Modificar" CssClass="btn btn-primary w-100" OnClick="btnModificarProfesor_Click"  />
                 </div>
 
                 <div class="mt-3 text-center">
@@ -54,6 +54,6 @@
         </div>
     </div>
     <div class="d-flex justify-content-end">
-    <asp:Button ID="Btn_Volver" CssClass="btn-light"a runat="server" Text="Volver" onclick="Btn_Volver_Click" CausesValidation="false" />
+    <asp:Button ID="Btn_Volver" CssClass="btn-light" runat="server" Text="Volver" onclick="Btn_Volver_Click" CausesValidation="false" />
     </div>
 </asp:Content>
