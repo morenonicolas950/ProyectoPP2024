@@ -75,7 +75,11 @@
     <Content Include="Estilos\Master\js\jquery.min.js" />
     <Content Include="Estilos\Master\js\main.js" />
     <Content Include="Estilos\Master\js\popper.js" />
+    <Content Include="Estilos\Usuario\css\style.css" />
+    <Content Include="Estilos\Usuario\index.html" />
+    <Content Include="Estilos\Usuario\js\script.js" />
     <Content Include="inicio.aspx" />
+    <Content Include="InicioUsuario.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="materias.aspx" />
     <Content Include="nuevoprofesor.aspx" />
@@ -108,6 +112,13 @@
     </Compile>
     <Compile Include="inicio.aspx.designer.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioUsuario.aspx.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioUsuario.aspx.designer.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -151,6 +162,13 @@
     </Compile>
     <Compile Include="registrarse.aspx.designer.cs">
       <DependentUpon>registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.Master.cs">
+      <DependentUpon>Usuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.Master.designer.cs">
+      <DependentUpon>Usuario.Master</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
@@ -364,6 +382,7 @@
     <None Include="Estilos\Master\scss\bootstrap\_variables.scss" />
     <None Include="Estilos\Master\scss\style.scss" />
     <Content Include="Principal.Master" />
+    <Content Include="Usuario.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
