@@ -1,36 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Usuario.Master" AutoEventWireup="true" CodeBehind="InicioUsuario.aspx.cs" Inherits="ProyectoPP2024.InicioUsuario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!-- Incluimos los estilos de MDB y personalización -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" />
-    <link rel="stylesheet" href="Estilos/Usuario/css/style.css" />
+  
+   
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarExample01">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="inicio.aspx">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Características</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Precios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar -->
+   
 
     <!-- Background image -->
     <div class="bg-image" style="background-image: url('https://images.vexels.com/media/users/3/144625/raw/61722030e99d83dbcc215a0633b6bf21-ilustraci-n-del-profesor-de-la-universidad-con-los-alumnos.jpg'); height: 400px;">
@@ -46,8 +21,8 @@
                             <div class="filter-options">
                                 <label for="tipo">Buscar por materia</label>
                                 <asp:DropDownList ID="tipo" runat="server" DataSourceID="SqlDataSource1" 
-                                    DataTextField="DESCRIPCION" DataValueField="ID_MATERIA">
-                                    <asp:ListItem Value="todos">Todos</asp:ListItem>
+                                    DataTextField="DESCRIPCION" DataValueField="ID_MATERIA" OnDataBound="tipo_DataBound">
+                                    <asp:ListItem Value="todos">TODOS</asp:ListItem>
 
                                 </asp:DropDownList>
     
@@ -55,17 +30,16 @@
                                     ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
                                     SelectCommand="SELECT * FROM [MATERIA]"></asp:SqlDataSource>
     
-                                <label for="zona">Zonas</label>
+                                <label for="zona">Localidad</label>
                                 <asp:DropDownList ID="zona" runat="server" DataSourceID="SqlDataSource2" 
-                                    DataTextField="DESCRIPCION" DataValueField="ID_LOCALIDAD">
-                                    <asp:ListItem Value="todas">Todas</asp:ListItem>
+                                    DataTextField="DESCRIPCION" DataValueField="ID_LOCALIDAD" OnDataBound="zona_DataBound">
+                                    <asp:ListItem Value="todas">TODAS</asp:ListItem>
                                     
                                 </asp:DropDownList>
                                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                                     ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
                                     SelectCommand="SELECT * FROM [LOCALIDAD]"></asp:SqlDataSource>
                             </div>
-
                                 <div>
                                     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" onclick="btnBuscar_Click"  CssClass="btn btn-outline-light btn-lg"></asp:Button>
                                 </div>
@@ -79,9 +53,5 @@
         </div>
 
     </div>
-    <!-- Background image -->
-
-    <!-- MDB Scripts -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
-    <script type="text/javascript" src="Estilos/Usuario/js/script.js"></script>
+    
 </asp:Content>

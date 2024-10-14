@@ -13,5 +13,17 @@ namespace ProyectoPP2024
         {
 
         }
+
+        protected void GridViewResultados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                 
+
+        }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InicioUsuario.aspx");
+        }
+        
     }
 }

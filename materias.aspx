@@ -4,7 +4,9 @@
     <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         DataKeyNames="ID_MATERIA" DataSourceID="SqlDataSource1" 
-        EmptyDataText="No hay registros de datos para mostrar." CssClass="table table-borderless table-hover text-center">
+        EmptyDataText="No hay registros de datos para mostrar." 
+            CssClass="table table-borderless table-hover text-center" 
+            onselectedindexchanged="GridView1_SelectedIndexChanged">
         <Columns>
             <asp:BoundField DataField="ID_MATERIA" HeaderText="ID_MATERIA" ReadOnly="True" 
                 SortExpression="ID_MATERIA" />
