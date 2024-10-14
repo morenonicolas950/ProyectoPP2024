@@ -29,24 +29,21 @@ namespace ProyectoPP2024
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            // Obtener los valores seleccionados por el usuario
-            //string materia = tipo.SelectedValue;
-            //string zon = zona.SelectedValue;
+           
 
-                           // protected void btnBuscar_Click(object sender, EventArgs e)
-                
+                        
                     // Obtener los valores seleccionados de los DropDownList
                     string materia = tipo.SelectedValue; // ID_MATERIA o "todos"
                     string zon = zona.SelectedValue; // ID_LOCALIDAD o "todas"
     
                     // Crear una consulta SQL base
-                    string query = "SELECT [DESCRIPCION] FROM [MATERIA] WHERE 1=1"; // "WHERE 1=1" es un truco para evitar problemas al concatenar filtros
-                    string query2 = "SELECT [DESCRIPCION] FROM [MATERIA] WHERE 1=1";       
+                    string query1 = "SELECT [DESCRIPCION] FROM [MATERIA] WHERE 1=1"; // "WHERE 1=1" es un truco para evitar problemas al concatenar filtros
+                    string query2 = "SELECT [DESCRIPCION] FROM [LOCALIDAD] WHERE 1=1";       
 
                     // Verificar si el usuario seleccionó algo distinto de "todos" para Materias
                     if (materia != "TODOS")
                     {
-                        query += " AND ID_MATERIA = @ID_MATERIA"; // Agregar un filtro para Materias
+                        query1 += " AND ID_MATERIA = @ID_MATERIA"; // Agregar un filtro para Materias
                     }
 
                     // Verificar si el usuario seleccionó algo distinto de "todas" para Zonas
