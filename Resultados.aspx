@@ -24,7 +24,8 @@
             FilterExpression="">
         </asp:SqlDataSource>
 
-    <asp:Button ID="btnVolver" runat="server" Text="Volver" onclick="btnVolver_Click" CssClass="btn-outline-info"/>
-  
+        <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
+        <asp:Button ID="btnVolver" runat="server" Text="Volver" onclick="btnVolver_Click" CssClass="btn-outline-info"/>
+        </div>
 
 </asp:Content>
