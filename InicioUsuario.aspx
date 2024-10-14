@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="inicio.aspx">Inicio </a>
+                        <a class="nav-link" href="inicio.aspx">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Características</a>
@@ -56,13 +56,14 @@
                                     SelectCommand="SELECT * FROM [MATERIA]"></asp:SqlDataSource>
     
                                 <label for="zona">Zonas</label>
-                                <asp:DropDownList ID="zona" runat="server">
+                                <asp:DropDownList ID="zona" runat="server" DataSourceID="SqlDataSource2" 
+                                    DataTextField="DESCRIPCION" DataValueField="ID_LOCALIDAD">
                                     <asp:ListItem Value="todas">Todas</asp:ListItem>
-                                    <asp:ListItem Value="norte">Zona Norte</asp:ListItem>
-                                    <asp:ListItem Value="sur">Zona Sur</asp:ListItem>
-                                    <asp:ListItem Value="oeste">Zona Oeste</asp:ListItem>
-                                    <asp:ListItem Value="centro">Zona Centro</asp:ListItem>
+                                    
                                 </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
+                                    SelectCommand="SELECT * FROM [LOCALIDAD]"></asp:SqlDataSource>
                             </div>
 
                                 <div>
