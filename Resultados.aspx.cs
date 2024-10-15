@@ -16,14 +16,26 @@ namespace ProyectoPP2024
 
         protected void GridViewResultados_SelectedIndexChanged(object sender, EventArgs e)
         {
-                 
+          
+            //GridViewResultados.DataBind();
 
+        }
+        protected void GridViewResultados_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            
+            //GridViewResultados2.DataBind();
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("InicioUsuario.aspx");
         }
+
+        
+
+        
+
+        
         
     }
 }

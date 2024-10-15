@@ -13,7 +13,7 @@
             
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-center text-white">
-                    <h1 class="mb-3">Contactá al profesor que estás buscando</h1>
+                    <h1 class="mb-3">Contactar al profesor que estás buscando</h1>
                     <div class="search-container">
         
                         

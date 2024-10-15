@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        
+        <!-- RESULTADOS MATERIAS -->
         <asp:GridView ID="GridViewResultados" runat="server" AutoGenerateColumns="True"
             DataSourceID="SqlDataSourceResultados">
         </asp:GridView>
@@ -14,6 +14,7 @@
             FilterExpression="">
         </asp:SqlDataSource>
 
+        <!-- RESULTADOS LOCALIDAD -->
          <asp:GridView ID="GridViewResultados2" runat="server" AutoGenerateColumns="True"
             DataSourceID="SqlDataSourceResultados2">
         </asp:GridView>
