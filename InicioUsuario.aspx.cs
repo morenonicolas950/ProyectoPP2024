@@ -38,23 +38,23 @@ namespace ProyectoPP2024
                     string zon = zona.SelectedValue; // ID_LOCALIDAD o "todas"
     
                     // Consulta para MATERIA
-                    string query1 = "SELECT [DESCRIPCION] FROM [MATERIA] WHERE 1=1";
+                    //string query1 = "SELECT [DESCRIPCION] FROM [MATERIA] WHERE 1=1";
                     //SqlDataSource1.SelectParameters.Add(new Parameter("ID_MATERIA", DbType.String, materia));
            
                     // Verificar si el usuario seleccionó algo distinto de "todos" para Materias
-                    if (materia != "TODOS")
+                    //if (materia != "TODOS")
                     {
-                        query1 += " AND ID_MATERIA = @ID_MATERIA"; // Agregar un filtro para Materias
+                       // query1 += " AND ID_MATERIA = @ID_MATERIA"; // Agregar un filtro para Materias
                     }
 
                     // Consulta para LOCALIDAD
-                    string query2 = "SELECT [DESCRIPCION] FROM [LOCALIDAD] WHERE 1=1";
+                    //string query2 = "SELECT [DESCRIPCION] FROM [LOCALIDAD] WHERE 1=1";
                     //SqlDataSource2.SelectParameters.Add(new Parameter("ID_LOCALIDAD", DbType.String, zona));
                     
                     // Verificar si el usuario seleccionó algo distinto de "todas" para Zonas
-                    if (zon != "TODAS")
+                   // if (zon != "TODAS")
                     {
-                        query2 += " AND ID_LOCALIDAD = @ID_LOCALIDAD"; // Agregar un filtro para Zonas
+                       // query2 += " AND ID_LOCALIDAD = @ID_LOCALIDAD"; // Agregar un filtro para Zonas
                     }
 
 

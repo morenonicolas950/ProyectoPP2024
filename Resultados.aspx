@@ -6,16 +6,17 @@
         <!-- RESULTADOS MATERIAS -->
         <asp:GridView ID="GridViewResultados" runat="server" AutoGenerateColumns="True"
             DataSourceID="SqlDataSourceResultados">
+           
         </asp:GridView>
 
-        <asp:SqlDataSource ID="SqlDataSourceResultados" runat="server" 
+       <!--  <asp:SqlDataSource ID="SqlDataSourceResultados" runat="server" 
             ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
             SelectCommand="SELECT [DESCRIPCION] FROM [MATERIA]" 
             FilterExpression="">
-        </asp:SqlDataSource>
+        </asp:SqlDataSource> -->
 
         <!-- RESULTADOS LOCALIDAD -->
-         <asp:GridView ID="GridViewResultados2" runat="server" AutoGenerateColumns="True"
+         <!--<asp:GridView ID="GridViewResultados2" runat="server" AutoGenerateColumns="True"
             DataSourceID="SqlDataSourceResultados2">
         </asp:GridView>
 
@@ -23,7 +24,7 @@
             ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
             SelectCommand="SELECT [DESCRIPCION] FROM [LOCALIDAD]" 
             FilterExpression="">
-        </asp:SqlDataSource>
+        </asp:SqlDataSource> -->
 
         <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
         <asp:Button ID="btnVolver" runat="server" Text="Volver" onclick="btnVolver_Click" CssClass="btn-outline-info"/>
