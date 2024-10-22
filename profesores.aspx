@@ -10,7 +10,8 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_PROFESOR"
                 DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar."
                 CssClass="table table-borderless table-hover text-center" 
-                AllowSorting="True" onrowcommand="GridView1_RowCommand" >
+                AllowSorting="True" onrowcommand="GridView1_RowCommand" 
+                onselectedindexchanged="GridView1_SelectedIndexChanged" >
                 <Columns>
                     <asp:BoundField DataField="ID_PROFESOR" HeaderText="ID_PROFESOR" ReadOnly="True"
                         SortExpression="ID_PROFESOR" />

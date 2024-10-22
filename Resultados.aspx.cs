@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 
+
 namespace ProyectoPP2024
 {
     public partial class Resultados : System.Web.UI.Page
@@ -22,17 +23,16 @@ namespace ProyectoPP2024
             if (!Page.IsPostBack)
             {
                 materia = Request.QueryString["materia"];
-                zon = Request.QueryString["zona"];
-
-                cargardatagridview();
+                zon = Request.QueryString["localidad"];
+                cargardatagridview(materia, zon);
 
             }
         }
-        public void cargardatagridview()
+        public void cargardatagridview(string materia, string zon)
         {
             using (SqlConnection connection = new SqlConnection(materia))
             {
-                SqlCommand consulta = new SqlCommand(string.Format("SELECT * FROM vw_FILTROS"), connection);
+                SqlCommand consulta = new SqlCommand(string.Format("SELECT * FROM vw_FILTRO WHERE materia={0} AND localidad{1}", materia, zon), connection);
                         // Abrir la conexión
                         connection.Open();
 
@@ -48,23 +48,19 @@ namespace ProyectoPP2024
                         // Asignar los datos al GridView
                         GridViewResultados.DataSource = dataTable;
                         GridViewResultados.DataBind();
-                    
-                        
              }           
 
         }
 
+        }
         protected void GridViewResultados_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
-            
-            
+
             //GridViewResultados.DataBind();
 
         }
         protected void GridViewResultados_SelectedIndexChanged1(object sender, EventArgs e)
         {
-            
             //GridViewResultados2.DataBind();
         }
 
