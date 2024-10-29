@@ -14,6 +14,7 @@ namespace ProyectoPP2024
     {
         private static string materia = string.Empty;
         private static string zon = string.Empty;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,30 +41,63 @@ namespace ProyectoPP2024
                     //SqlDataSource1.SelectParameters.Clear();
                     //SqlDataSource2.SelectParameters.Clear();
                     // Obtener los valores seleccionados de los DropDownList
-                    //string materia = tipo.SelectedValue; // ID_MATERIA o "todos"
-                   // string zon = zona.SelectedValue; // ID_LOCALIDAD o "todas"
+                    string materia = tipo.SelectedValue; // ID_MATERIA o "todos"
+                    string zon = zona.SelectedValue; // ID_LOCALIDAD o "todas"
+
     
                     // Consulta para MATERIA
-                   // string query1 = "SELECT [DESCRIPCION] FROM [vw_FILTRO] WHERE 1=1";
+                   string query = "SELECT * FROM [vw_FILTRO] WHERE ID_MATERIA= " + materia;
                     //SqlDataSource1.SelectParameters.Add(new Parameter("ID_MATERIA", DbType.String, materia));
            
                     // Verificar si el usuario seleccionó algo distinto de "todos" para Materias
-                   // if (materia != "TODOS")
+                   if (materia != "TODOS")
                     {
-                       //query1 += " AND ID_MATERIA = @ID_MATERIA"; // Agregar un filtro para Materias
+                       query += " AND ID_MATERIA = @ID_MATERIA"; // Agregar un filtro para Materias
                     }
 
                     // Consulta para LOCALIDAD
-                    //string query2 = "SELECT [DESCRIPCION] FROM [vw_FILTRO] WHERE 1=1";
+                    string query2 = "SELECT [DESCRIPCION] FROM [vw_FILTRO] WHERE ID_LOCALIDAD= " + zon;
                     //SqlDataSource1.SelectParameters.Add(new Parameter("ID_LOCALIDAD", DbType.String, zon));
                     
                     // Verificar si el usuario seleccionó algo distinto de "todas" para Zonas
-                    //if (zon != "TODAS")
+                    if (zon != "TODAS")
                     {
-                       //query2 += " AND ID_LOCALIDAD = @ID_LOCALIDAD"; // Agregar un filtro para Zonas
+                       query2 += " AND ID_LOCALIDAD = @ID_LOCALIDAD"; // Agregar un filtro para Zonas
                     }
 
+                string  connectionString = ConfigurationManager.ConnectionStrings["Cadena"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(connectionString))
+                 {
+                     using (SqlCommand cmd = new SqlCommand(query, con))
+                     {
+                         // Agrega parámetros para evitar inyecciones SQL
+                         if (materia != "TODOS")
+                         {
+                             cmd.Parameters.AddWithValue("@Materia", materia);
+                         }
 
+                         if (zon != "TODAS")
+                         {
+                             cmd.Parameters.AddWithValue("@Localidad", zon);
+                         }
+
+                         using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                            {
+                                DataTable dt = new DataTable();
+                                sda.Fill(dt);
+
+                                // Crear y configurar el GridView de manera dinámica
+                                GridView gridView = new GridView();
+                                gridView.ID = "GridViewDinamico";
+                                gridView.AutoGenerateColumns = true;
+                                gridView.DataSource = dt;
+                                gridView.DataBind();
+
+                                // Agrega el GridView dinámico a un contenedor en la página
+                                PlaceHolderGridView.Controls.Clear(); // Limpia el panel para evitar duplicados
+                                PlaceHolderGridView.Controls.Add(gridView);
+                             }
+                }
 
                     //SqlDataSource1.SelectCommand = query1;
                     //SqlDataSource1.SelectCommand = query2;

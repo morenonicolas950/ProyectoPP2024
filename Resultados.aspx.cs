@@ -50,9 +50,7 @@ namespace ProyectoPP2024
                         GridViewResultados.DataBind();
              }           
 
-        }
-
-        }
+        
         protected void GridViewResultados_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -5,8 +5,10 @@
 
         <!-- RESULTADOS MATERIAS -->
         <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
-        <asp:GridView ID="GridViewResultados" runat="server" AutoGenerateColumns="False" CellPadding="10" CellSpacing="5" 
-            DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridViewResultados" runat="server" AutoGenerateColumns="False" 
+                CellPadding="10" CellSpacing="5" 
+            DataSourceID="SqlDataSource1" 
+                onselectedindexchanged="GridViewResultados_SelectedIndexChanged">
           
           <Columns>
                     <asp:BoundField DataField="ID_PROFESOR" HeaderText="ID_PROFESOR"
@@ -17,10 +19,12 @@
                     <asp:BoundField DataField="MATERIA" HeaderText="MATERIA" SortExpression="MATERIA" />
                     <asp:BoundField DataField="ID_LOCALIDAD" HeaderText="ID_LOCALIDAD" SortExpression="ID_LOCALIDAD" Visible="false"/>
                     <asp:BoundField DataField="LOCALIDAD" HeaderText="LOCALIDAD" SortExpression="LOCALIDAD" />
-               
-               <asp:TemplateField>
+         
+                   
+               <asp:TemplateField HeaderText="CONTACTO">
                     <ItemTemplate>
-                        <asp:Button ID="btnContacto" runat="server" Text="Contacto" CssClass="btn btn-warning" CommandName="Contacto" CommandArgument='<%# Container.DataItemIndex.ToString() %>'/>
+                        <asp:ImageButton ID="btnContacto" runat="server" CssClass="btn btn-warning" CommandName="Contacto" CommandArgument='<%# Container.DataItemIndex.ToString() %>' ImageUrl='~/Estilos/Imagenes/Ojo_para_ocultar.jpg' Width="80px" Height="50px"></asp:ImageButton>
+                        
                     </ItemTemplate>
                 </asp:TemplateField>
 

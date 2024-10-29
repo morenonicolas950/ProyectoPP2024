@@ -42,6 +42,7 @@
                             </div>
                                 <div>
                                     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" onclick="btnBuscar_Click"  CssClass="btn btn-outline-light btn-lg"></asp:Button>
+                                    <asp:PlaceHolder ID="PlaceHolderGridView" runat="server"></asp:PlaceHolder>
                                 </div>
 
                                <!-- <button type="submit">Buscar</button> -->
