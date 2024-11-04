@@ -21,8 +21,9 @@
                             <div class="filter-options">
                                 <label for="tipo">Buscar por materia</label>
                                 <asp:DropDownList ID="tipo" runat="server" DataSourceID="SqlDataSource1" 
-                                    DataTextField="DESCRIPCION" DataValueField="ID_MATERIA" OnDataBound="tipo_DataBound">
-                                    <asp:ListItem Value="todos">TODOS</asp:ListItem>
+                                    DataTextField="DESCRIPCION" DataValueField="ID_MATERIA" 
+                                    ondatabound="tipo_DataBound" >
+                                    <asp:ListItem Value="0">TODOS</asp:ListItem>
 
                                 </asp:DropDownList>
     
@@ -32,9 +33,9 @@
     
                                 <label for="zona">Localidad</label>
                                 <asp:DropDownList ID="zona" runat="server" DataSourceID="SqlDataSource2" 
-                                    DataTextField="DESCRIPCION" DataValueField="ID_LOCALIDAD" OnDataBound="zona_DataBound">
-                                    <asp:ListItem Value="todas">TODAS</asp:ListItem>
-                                    
+                                    DataTextField="DESCRIPCION" DataValueField="ID_LOCALIDAD" 
+                                    ondatabound="zona_DataBound">
+                                    <asp:ListItem Value="0">TODAS</asp:ListItem>
                                 </asp:DropDownList>
                                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                                     ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
@@ -42,7 +43,7 @@
                             </div>
                                 <div>
                                     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" onclick="btnBuscar_Click"  CssClass="btn btn-outline-light btn-lg"></asp:Button>
-                                    <asp:PlaceHolder ID="PlaceHolderGridView" runat="server"></asp:PlaceHolder>
+                                    
                                 </div>
 
                                <!-- <button type="submit">Buscar</button> -->
