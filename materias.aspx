@@ -1,12 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="materias.aspx.cs" Inherits="ProyectoPP2024.materias" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
+    <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4 w-100">
+    <div class="d-flex justify-content-end h-25">  
+        <asp:Button ID="btn_AgregarMateria" runat="server" Text="Agregar Materia" CssClass="mb-3 bg-success h-auto" 
+            onclick="btn_AgregarMateria_Click"/>
+    </div>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         DataKeyNames="ID_MATERIA" DataSourceID="SqlDataSource1" 
         EmptyDataText="No hay registros de datos para mostrar." 
             CssClass="table table-borderless table-hover text-center" 
-            onselectedindexchanged="GridView1_SelectedIndexChanged">
+            onrowcommand="GridView1_RowCommand">
         <Columns>
             <asp:BoundField DataField="ID_MATERIA" HeaderText="ID_MATERIA" ReadOnly="True" 
                 SortExpression="ID_MATERIA" />
@@ -14,7 +18,7 @@
                 SortExpression="DESCRIPCION" />
                    <asp:TemplateField HeaderText="Modificar">
             <ItemTemplate>
-                <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-warning" CommandName="Modificar" CommandArgument='<%# Eval("ID_MATERIA") %>' />
+                <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-warning" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>'/>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Eliminar">

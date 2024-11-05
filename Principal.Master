@@ -14,7 +14,7 @@
   </head>
   <body>
 		
-		<div class="wrapper d-flex align-items-stretch">
+		<div class="wrapper d-flex align-items-stretch" style="background-color: #DFF2EB";>
 			
             
             <nav id="sidebar">
@@ -33,15 +33,15 @@
              <a href="Usuarios.aspx"><span class="fa fa-user mr-3"></span> Usuarios </a>
           </li>
           <li>
-            <a href="profesores.aspx"><span class="fa fa-sticky-note mr-3"></span> Profesores</a>
+            <a href="profesores.aspx"><span class="fa fa-id-card mr-3"></span> Profesores</a>
           </li>
           <li>
-            <a href="materias.aspx"><span class="fa fa-paper-plane mr-3"></span> Materias</a>
+            <a href="materias.aspx"><span class="fa fa-institution mr-3"></span> Materias</a>
+          </li>
+          <li>
+            <a href="AsignarMateriaProfesor.aspx"><span class="fa fa-money mr-3"></span> Asignar</a>
           </li>
           <%--<li>
-            <a href="#"><span class="fa fa-paper-plane mr-3"></span> Settings</a>
-          </li>
-          <li>
             <a href="#"><span class="fa fa-paper-plane mr-3"></span> Information</a>
           </li>--%>
         </ul>

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="profesores.aspx.cs" Inherits="ProyectoPP2024.profesores" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4">
+    <div class= "d-flex ml-4 mt-5 flex-column border-dark mb-4 vw-80">
         <div class="h-50 bg-dark border-white mb-3 d-flex justify-content-center"  >
             <asp:Button ID="Btn_NuevoProfesor" runat="server" Text="Nuevo" Width="120px" 
                 BackColor="LightGreen" CssClass="m-2 mr-3" onclick="Btn_NuevoProfesor_Click"/>
@@ -10,8 +10,7 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_PROFESOR"
                 DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar."
                 CssClass="table table-borderless table-hover text-center" 
-                AllowSorting="True" onrowcommand="GridView1_RowCommand" 
-                onselectedindexchanged="GridView1_SelectedIndexChanged" >
+                AllowSorting="True" onrowcommand="GridView1_RowCommand">
                 <Columns>
                     <asp:BoundField DataField="ID_PROFESOR" HeaderText="ID_PROFESOR" ReadOnly="True"
                         SortExpression="ID_PROFESOR" />

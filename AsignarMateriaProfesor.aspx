@@ -1,11 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="AsignarMateriaProfesor.aspx.cs" Inherits="ProyectoPP2024.AsignarMateriaProfesor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<h1> Asignar Materia a Profesor </h1>
-<form id="form1" runat="server">
-   <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
 
+    <div class="container d-flex flex-column align-items-center ml-5">
+    <div class="p-4" style="width:auto;">
+        <h3 class="text-center"> Asignar Materia a Profesor </h3>
+        
                     <!-- Seleccionar profesor-->
                      <div class="form-group">
                         <label for="ddlProfesor">Profesor</label>
@@ -33,7 +32,7 @@
                     <!-- Precio -->
                     <div class="form-group">
                         <label for="txtPrecio">Precio por Hora</label>
-                        <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" Placeholder="Precio" type="number"></asp:TextBox>
+                        <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" Placeholder="Precio"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="El precio es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                     </div>
                      <!-- Botón para registrar la materia al profesor -->
@@ -47,7 +46,5 @@
                     </div>
                 </div>
             </div>
-        </div>
-    <asp:Button ID="Btn_Volver" runat="server" Text="Volver" onclick="Btn_Volver_Click" CausesValidation="false" />
-    </form>
+        </div >
 </asp:Content>

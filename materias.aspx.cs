@@ -14,5 +14,22 @@ namespace ProyectoPP2024
             //string id = Request.QueryString["id"];
 
         }
+
+        protected void btn_AgregarMateria_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("AgregarMateria.aspx");
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Editar")
+            {
+                //e.CommandArgument.ToString();
+                int index = int.Parse(e.CommandArgument.ToString());
+                string id = GridView1.DataKeys[index].Value.ToString();
+                Response.Redirect("ModificarMateria.aspx?ID=" + id);
+                //GridView1.data
+            }
+        }
     }
 }
