@@ -13,7 +13,8 @@
                             DataValueField="ID_PROFESOR"></asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                             ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
-                            SelectCommand="SELECT * FROM [PROFESOR]"></asp:SqlDataSource>
+                            
+                             SelectCommand="SELECT ID_PROFESOR, NOMBRE, APELLIDO, EMAIL, TELEFONO, ID_LOCALIDAD FROM PROFESOR WHERE (NOMBRE &lt;&gt; '')"></asp:SqlDataSource>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlMateria" InitialValue="" ErrorMessage="Debe seleccionar una materia" CssClass="text-danger"></asp:RequiredFieldValidator>
                     </div>
 
@@ -32,7 +33,7 @@
                     <!-- Precio -->
                     <div class="form-group">
                         <label for="txtPrecio">Precio por Hora</label>
-                        <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" Placeholder="Precio"></asp:TextBox>
+                        <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="El precio es obligatorio" CssClass="text-danger"></asp:RequiredFieldValidator>
                     </div>
                      <!-- Botón para registrar la materia al profesor -->
@@ -46,5 +47,5 @@
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
 </asp:Content>
