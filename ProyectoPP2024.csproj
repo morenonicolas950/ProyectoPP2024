@@ -54,8 +54,11 @@
     <Content Include="AgregarMateria.aspx" />
     <Content Include="AgregarProfesor.aspx" />
     <Content Include="AsignarMateriaProfesor.aspx" />
+    <Content Include="Contacto.aspx" />
     <Content Include="Estilos\imagenes\editar.png" />
     <Content Include="Estilos\imagenes\eliminar.png" />
+    <Content Include="Estilos\imagenes\Ojo_para_ocultar.jpg" />
+    <Content Include="Estilos\imagenes\Ojo_para_ocultar_80.jpg" />
     <Content Include="Estilos\Login\css\bootstrap.min.css" />
     <Content Include="Estilos\Login\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Estilos\Login\css\bootstrap\mixins\_screen-reader.css" />
@@ -130,6 +133,13 @@
     </Compile>
     <Compile Include="AsignarMateriaProfesor.aspx.designer.cs">
       <DependentUpon>AsignarMateriaProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto.aspx.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacto.aspx.designer.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
