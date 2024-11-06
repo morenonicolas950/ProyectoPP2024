@@ -2,8 +2,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <div class="container d-flex justify-content-between m-5 vh-100 vw-80">
-
+     <div class="container m-5 vh-100 vw-80">
+        <div class= "d-flex justify-content-between" >
         <div class="card text-white bg-primary h-25">
           <div class="card-header">Usuarios</div>
           <div class="card-body">
@@ -21,6 +21,45 @@
           <div class="card-body">
             <label id="lblMaterias" class="d-flex justify-content-end">N</label>
           </div>
-  </div>
+      </div>
+      </div>
+      <div class="d-flex flex-column">
+        <h4 class="text-center m-2"> Profesores y materias que dictan </h4>
+         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+             DataSourceID="SqlDataSource1" 
+             EmptyDataText="No hay registros de datos para mostrar." CssClass="table table-borderless table-hover text-center">
+             <Columns>
+                 <asp:BoundField DataField="NOMBRE" HeaderText="NOMBRE" 
+                     SortExpression="NOMBRE" />
+                 <asp:BoundField DataField="APELLIDO" HeaderText="APELLIDO" 
+                     SortExpression="APELLIDO" />
+                 <asp:BoundField DataField="DESCRIPCION" HeaderText="MATERIA" 
+                     SortExpression="DESCRIPCION" />
+                 <asp:BoundField DataField="PRECIO" HeaderText="PRECIO" 
+                     SortExpression="PRECIO" />
+             </Columns>
+         </asp:GridView>
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+             ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
+             DeleteCommand="DELETE FROM [DICTA_MATERIA] WHERE [ID] = @ID" 
+             InsertCommand="INSERT INTO [DICTA_MATERIA] ([ID_PROFESOR], [ID_MATERIA], [PRECIO]) VALUES (@ID_PROFESOR, @ID_MATERIA, @PRECIO)" 
+             SelectCommand="SELECT PROFESOR.NOMBRE, PROFESOR.APELLIDO, MATERIA.DESCRIPCION, DICTA_MATERIA.PRECIO FROM DICTA_MATERIA INNER JOIN PROFESOR ON PROFESOR.ID_PROFESOR = DICTA_MATERIA.ID_PROFESOR INNER JOIN MATERIA ON DICTA_MATERIA.ID_MATERIA = MATERIA.ID_MATERIA" 
+             UpdateCommand="UPDATE [DICTA_MATERIA] SET [ID_PROFESOR] = @ID_PROFESOR, [ID_MATERIA] = @ID_MATERIA, [PRECIO] = @PRECIO WHERE [ID] = @ID">
+             <DeleteParameters>
+                 <asp:Parameter Name="ID" Type="Int32" />
+             </DeleteParameters>
+             <InsertParameters>
+                 <asp:Parameter Name="ID_PROFESOR" Type="Int32" />
+                 <asp:Parameter Name="ID_MATERIA" Type="Int32" />
+                 <asp:Parameter Name="PRECIO" Type="Double" />
+             </InsertParameters>
+             <UpdateParameters>
+                 <asp:Parameter Name="ID_PROFESOR" Type="Int32" />
+                 <asp:Parameter Name="ID_MATERIA" Type="Int32" />
+                 <asp:Parameter Name="PRECIO" Type="Double" />
+                 <asp:Parameter Name="ID" Type="Int32" />
+             </UpdateParameters>
+         </asp:SqlDataSource>
+         </div>
       </div>
 </asp:Content>
