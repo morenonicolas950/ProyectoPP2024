@@ -22,7 +22,7 @@
                 <asp:BoundField DataField="LOCALIDAD" HeaderText="LOCALIDAD" SortExpression="LOCALIDAD" />
                 
                 <asp:HyperLinkField DataNavigateUrlFields="ID_PROFESOR"  
-                    DataNavigateUrlFormatString="Contacto.aspx?materia={0}" Text="CONTACTO" 
+                    DataNavigateUrlFormatString="Contacto.aspx?Id_profesor={0}" Text="CONTACTO" 
                     HeaderText="CONTACTO" />
             </Columns>
           
@@ -31,7 +31,7 @@
 
     </div>
     
-    <div class="d-flex ml-4 mt-5 flex-column border-dark mb-4">
+    <div class="d-flex ml-4 mt-3 flex-column border-dark mb-4">
         <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click"
             CssClass="btn-outline-info" />
     </div>
