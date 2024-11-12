@@ -23,6 +23,21 @@ namespace ProyectoPP2024
 
                 TraerProfesor(id);
             }
+
+            {
+                if (!Page.IsPostBack)
+                {
+                    if (Session["NombreUsuario"] == null)
+                    {
+                        Response.Redirect("Login.aspx");
+                    }
+                    else
+                    {
+                        if (Session["NombreUsuario"].ToString() == String.Empty)
+                            Response.Redirect("Login.aspx");
+                    }
+                }
+            }
         }
 
         public void TraerProfesor(string id)

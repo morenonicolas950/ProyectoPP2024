@@ -14,17 +14,17 @@
   </head>
   <body>
 		
-		<div class="wrapper d-flex align-items-stretch" style="background-color: #DFF2EB";>
+		<div class="wrapper d-flex align-items-stretch" style="background-color: #FAEDCE";>
 			
             
             <nav id="sidebar">
 				<div class="custom-menu">
 					<button type="button" id="sidebarCollapse" class="btn btn-primary">
-	          <i class="fa fa-bars"></i>
-	          <span class="sr-only">Toggle Menu</span>
-	        </button>
-        </div>
-	  		<h1><a class="logo">Administrador</a></h1>
+	                  <i class="fa fa-bars"></i>
+	                  <span class="sr-only">Toggle Menu</span>
+	                </button>
+                 </div>
+	  		<h1><a class="logo"> bienvenido</a></h1>
         <ul class="list-unstyled components mb-5">
           <li class="active">
             <a href="inicio.aspx"><span class="fa fa-home mr-3"></span> Inicio </a>
@@ -41,9 +41,9 @@
           <li>
             <a href="AsignarMateriaProfesor.aspx"><span class="fa fa-money mr-3"></span> Asignar</a>
           </li>
-          <%--<li>
-            <a href="#"><span class="fa fa-paper-plane mr-3"></span> Information</a>
-          </li>--%>
+          <li>
+            <a href="Logout.aspx"><span class="fa fa-sign-out mr-3"></span> Cerrar Sesión</a>
+          </li>
         </ul>
 
     	</nav>

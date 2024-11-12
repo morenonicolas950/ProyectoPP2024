@@ -6,7 +6,8 @@
         <asp:Button ID="btn_AgregarMateria" runat="server" Text="Agregar Materia" CssClass="mb-3 bg-success h-auto" 
             onclick="btn_AgregarMateria_Click"/>
     </div>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+    <div style="overflow: auto; height: 300px; width:auto;" >
+    <asp:GridView ID="GridView1" runat="server" BackColor="#FEFAE0" AutoGenerateColumns="False" 
         DataKeyNames="ID_MATERIA" DataSourceID="SqlDataSource1" 
         EmptyDataText="No hay registros de datos para mostrar." 
             CssClass="table table-borderless table-hover text-center" 
@@ -28,6 +29,7 @@
         </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
         DeleteCommand="DELETE FROM [MATERIA] WHERE [ID_MATERIA] = @ID_MATERIA" 

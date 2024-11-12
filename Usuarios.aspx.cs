@@ -11,7 +11,20 @@ namespace ProyectoPP2024
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            {
+                if (!Page.IsPostBack)
+                {
+                    if (Session["NombreUsuario"] == null)
+                    {
+                        Response.Redirect("Login.aspx");
+                    }
+                    else
+                    {
+                        if (Session["NombreUsuario"].ToString() == String.Empty)
+                            Response.Redirect("Login.aspx");
+                    }
+                }
+            }
         }
 
     }

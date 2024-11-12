@@ -16,12 +16,13 @@ namespace ProyectoPP2024
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             {
+                
                 string nombreUsuario = txtUsuario.Text;
                 string contrasena = txtPassword.Text;
 
@@ -41,6 +42,9 @@ namespace ProyectoPP2024
                         // Autenticación exitosa
                         Session["NombreUsuario"] = nombreUsuario;
                         Page.Response.Redirect("inicio.aspx");
+                        txtUsuario.Text = "";
+                        txtPassword.Text = "";
+
                     }
                     else
                     {

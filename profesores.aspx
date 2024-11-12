@@ -7,10 +7,10 @@
                 BackColor="LightGreen" CssClass="m-2 mr-3" onclick="Btn_NuevoProfesor_Click"/>
         </div>
         <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_PROFESOR"
+            <asp:GridView ID="GridView1" BackColor="#FEFAE0" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_PROFESOR"
                 DataSourceID="SqlDataSource1" EmptyDataText="No hay registros de datos para mostrar."
-                CssClass="table table-borderless table-hover text-center" 
-                AllowSorting="True" onrowcommand="GridView1_RowCommand">
+                CssClass="table table-borderless table-hover text-center"
+                AllowSorting="True" onrowcommand="GridView1_RowCommand" Font-Size="Smaller">
                 <Columns>
                     <asp:BoundField DataField="ID_PROFESOR" HeaderText="ID_PROFESOR" ReadOnly="True"
                         SortExpression="ID_PROFESOR" />
@@ -21,7 +21,7 @@
                     <asp:BoundField DataField="LOCALIDAD" HeaderText="LOCALIDAD" SortExpression="DESCRIPCION" />
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-warning" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>'/>
+                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-warning h-auto w-auto" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField>
@@ -31,6 +31,7 @@
         </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+             
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                     ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
                     DeleteCommand="DELETE FROM [PROFESOR] WHERE [ID_PROFESOR] = @ID_PROFESOR" 

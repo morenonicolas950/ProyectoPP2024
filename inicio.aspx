@@ -4,30 +4,31 @@
 
      <div class="container m-5 vh-100 vw-80">
         <div class= "d-flex justify-content-between" >
-        <div class="card text-white bg-primary h-25">
+        <div class="card text-black h-25" style="background-color:#FEFAE0; font-size: large";>
           <div class="card-header">Usuarios</div>
           <div class="card-body">
-            <label id="lblUsuarios" class="d-flex justify-content-end">N</label>
+            <label id="lblUsuarios" runat="server" class="d-flex justify-content-end">N</label>
           </div>
         </div>
-        <div class="card text-white bg-secondary h-25" style="max-width:200px; max-height:200px;">
+        <div class="card text-black h-25" style="background-color:#FEFAE0; font-size: large";>
           <div class="card-header">Profesores</div>
           <div class="card-body">
-            <label id="lblProfesores" class="d-flex justify-content-end">N</label>
+            <label id="lblProfesores" runat="server" class="d-flex justify-content-end">N</label>
           </div>
         </div>
-        <div class="card text-white bg-success mb-3 h-25" style="max-width:200px;">
+        <div class="card text-black mb-3 h-25" style="background-color:#FEFAE0; font-size: large";>
           <div class="card-header">Materias</div>
           <div class="card-body">
-            <label id="lblMaterias" class="d-flex justify-content-end">N</label>
+            <label id="lblMaterias"  runat="server" class="d-flex justify-content-end">N</label>
           </div>
       </div>
       </div>
       <div class="d-flex flex-column">
         <h4 class="text-center m-2"> Profesores y materias que dictan </h4>
+        <div style="overflow: auto; height: 300px; width:auto;" >
          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-             DataSourceID="SqlDataSource1" 
-             EmptyDataText="No hay registros de datos para mostrar." CssClass="table table-borderless table-hover text-center">
+             DataSourceID="SqlDataSource1" BackColor="#FEFAE0" 
+             EmptyDataText="No hay registros de datos para mostrar." CssClass="table table-borderless table-hover text-center overflow-auto">
              <Columns>
                  <asp:BoundField DataField="NOMBRE" HeaderText="NOMBRE" 
                      SortExpression="NOMBRE" />
@@ -39,6 +40,7 @@
                      SortExpression="PRECIO" />
              </Columns>
          </asp:GridView>
+         </div>
          <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
              ConnectionString="<%$ ConnectionStrings:PRACTICAPROFESIONALConnectionString1 %>" 
              DeleteCommand="DELETE FROM [DICTA_MATERIA] WHERE [ID] = @ID" 
