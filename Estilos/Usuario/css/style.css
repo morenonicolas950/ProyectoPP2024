@@ -36,3 +36,42 @@
     border-color: #fff;
     color: #fff;
 }
+ .contact-card {
+    max-width: 370px; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espacio interior */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 1px solid #ddd; /* Borde */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.contact-card .table {
+    width: 100%; /* Hacer que la tabla ocupe el ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+.contact-card td {
+    padding: 10px; /* Espacio interior en las celdas */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.contact-card tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo alternado */
+}
+
+.contact-card td:first-child {
+    font-weight: bold; /* Negrita para las etiquetas */
+    color: #333; /* Color de texto */
+}
+
+.contact-card td:last-child {
+    text-align: right; /* Alinear el texto de los datos a la derecha */
+}
+.contact-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}

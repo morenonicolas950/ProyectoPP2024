@@ -23,14 +23,12 @@
                 
                 <asp:HyperLinkField DataNavigateUrlFields="ID_PROFESOR"  
                     DataNavigateUrlFormatString="Contacto.aspx?Id_profesor={0}" Text="CONTACTO" 
-                    HeaderText="CONTACTO" />
+                    HeaderText="CONTACTO"/>
             </Columns>
           
         </asp:GridView>
-        
-
+         <asp:Label ID="lblMensaje" runat="server" ForeColor="Red" Visible="false" Style="font-size: 25px; font-weight: bold;"></asp:Label>
     </div>
-    
     <div class="d-flex ml-4 mt-3 flex-column border-dark mb-4">
         <asp:Button ID="btnVolver" runat="server" Text="Volver" OnClick="btnVolver_Click"
             CssClass="btn-outline-info" />

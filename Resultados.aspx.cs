@@ -56,6 +56,7 @@ namespace ProyectoPP2024
 
 
 
+
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -65,14 +66,26 @@ namespace ProyectoPP2024
                         {
                             DataTable dt = new DataTable();
                             sda.Fill(dt);
+                            if (dt.Rows.Count == 0)
+                            {
+                                // Mostrar mensaje si no se encontraron resultados
+                                lblMensaje.Text = "No se encontraron resultados.";
+                                lblMensaje.Visible = true;
+                            }
+                            else
+                            {
+                                // Ocultar mensaje y llenar el GridView
+                                lblMensaje.Visible = false;
+                                DataTable dataTable = new DataTable();
+                                sda.Fill(dataTable);
+
+                                //Aca cargan los registros al gridview que crearon.
+                                GridViewResultados.DataSource = dataTable;
+                                GridViewResultados.DataBind();
+                            }
 
 
-                            DataTable dataTable = new DataTable();
-                            sda.Fill(dataTable);
-
-                            //Aca cargan los registros al gridview que crearon.
-                            GridViewResultados.DataSource = dataTable;
-                            GridViewResultados.DataBind();
+                           
                         }
                     }
                 }
